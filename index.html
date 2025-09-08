@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Green Earth</title>
+    <!-- Tailwind + DaisyUI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="bg-base-100 text-base-content">
+
+    <div class="navbar bg-[#15803D] shadow-md sticky top-0 z-50">
+        <!-- Left: Logo -->
+        <div class="navbar-start">
+            <a class="btn btn-ghost normal-case text-xl text-white">🌿 Green Earth</a>
+        </div>
+
+        <!-- Middle: Menu -->
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-white">
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#plant">Plant a Tree</a></li>
+            </ul>
+        </div>
+
+        <!-- Right: Button -->
+        <div class="navbar-end">
+            <button class="btn btn-warning text-green-900">Plant a Tree</button>
+        </div>
+    </div>
+
+    <!-- Banner -->
+    <section id="home" class="hero min-h-[50vh] bg-gradient-to-r from-green-100 to-green-200">
+        <div class="hero-content flex-col lg:flex-row items-center justify-center w-full px-8 gap-10">
+
+            <!-- Left Image -->
+            <div class="hidden lg:flex flex-1 justify-center">
+                <img src="./assets/hero-leaf1.png" alt="Left Banner" class="max-w-xs lg:max-w-sm rounded-lg" />
+            </div>
+
+            <!-- Middle Content -->
+            <div class="text-center flex-1">
+                <h1 class="text-4xl lg:text-5xl font-bold text-green-900">Plant a Tree, Grow a Future</h1>
+                <p class="py-4 text-sm text-gray-700">Join our mission to plant 1 million trees and make the Earth
+                    greener for future
+                    generations.</p>
+                <button class="btn btn-warning px-8 text-green-900 font-semibold">Get Involved</button>
+            </div>
+
+            <!-- Right Image -->
+            <div class="hidden lg:flex flex-1 justify-center">
+                <img src="./assets/hero-leaf2.png" alt="Right Banner" class="max-w-xs lg:max-w-sm rounded-lg" />
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Choose Your Trees Section -->
+    <section id="trees" class="w-full px-4 py-12">
+        <h2 class="text-2xl font-bold text-center mb-8">Choose Your Trees</h2>
+
+        <div class="flex flex-col lg:flex-row gap-6">
+
+            <!-- Categories -->
+            <aside class="w-full lg:w-1/4 bg-green-50 p-4 rounded shadow">
+                <h3 class="font-semibold mb-4 text-lg">Categories</h3>
+                <div id="category-list" class="space-y-2">
+                    <!-- JS will inject categories here -->
+                </div>
+            </aside>
+
+            <!-- Plant Cards -->
+            <div class="flex-1">
+                <div id="plant-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+                <div id="loading-spinner" class="text-center py-6 hidden">
+                    <span class="loading loading-spinner loading-lg text-green-500">Loading...</span>
+                </div>
+            </div>
+
+            <!-- Cart -->
+            <aside class="w-full lg:w-1/4 bg-green-100 p-4 rounded shadow">
+                <h3 class="font-semibold mb-4">Your Cart</h3>
+                <ul id="cart-items" class="space-y-2"></ul>
+                <p class="font-bold mt-4">Total: $<span id="cart-total">0</span></p>
+            </aside>
+
+        </div>
+    </section>
+
+
+
+
+
+    <!-- About Section -->
+    <section id="about" class="max-w-6xl mx-auto px-4 py-16">
+        <!-- Section Title -->
+        <h2 class="text-3xl font-bold text-center mb-12">About the Campaign</h2>
+
+        <!-- Content -->
+        <div class="flex flex-col lg:flex-row items-center gap-10">
+
+            <!-- Left Image -->
+            <div class="flex-1 flex justify-center">
+                <img src="./assets/about.png" class="rounded-lg shadow-lg" alt="About">
+            </div>
+
+            <!-- Right Text -->
+            <div class="flex-1 text-gray-700">
+                <p class="mb-6">
+                    <span class="font-semibold text-green-900">Green Earth</span> is a global tree plantation initiative
+                    dedicated to fighting climate change.
+                    Since our start, we’ve planted over <span class="font-semibold">500,000 trees worldwide</span>.
+                    By joining our campaign, you help restore forests, create habitats for wildlife, and combat global
+                    warming.
+                </p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Restoration of natural habitats</li>
+                    <li>Improvement of air quality</li>
+                    <li>Support for local communities</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Impact Section -->
+    <section id="impact" class="bg-[#CFF0DC] py-12">
+        <h2 class="text-3xl font-bold text-center mb-10">Our Impact</h2>
+
+        <div class="flex flex-wrap justify-center gap-8">
+
+            <!-- Card 1 -->
+            <div class="card bg-white shadow-lg w-[510px] h-[156px] flex items-center justify-center 
+                transition transform hover:scale-105 hover:bg-green-100 hover:shadow-xl duration-300">
+                <div class="text-center">
+                    <h3 class="text-4xl font-bold text-green-900">500+</h3>
+                    <p class="text-gray-700">Trees Planted</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card bg-white shadow-lg w-[510px] h-[156px] flex items-center justify-center 
+                transition transform hover:scale-105 hover:bg-green-100 hover:shadow-xl duration-300">
+                <div class="text-center">
+                    <h3 class="text-4xl font-bold text-green-900">120+</h3>
+                    <p class="text-gray-700">Communities Involved</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card bg-white shadow-lg w-[510px] h-[156px] flex items-center justify-center 
+                transition transform hover:scale-105 hover:bg-green-100 hover:shadow-xl duration-300">
+                <div class="text-center">
+                    <h3 class="text-4xl font-bold text-green-900">30+</h3>
+                    <p class="text-gray-700">Countries Reached</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <!-- Plant Form -->
+    <section id="plant" class="py-12 bg-[#166534]">
+        <div class="max-w-md mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-4 text-center text-white">Plant a Tree Today</h2>
+
+            <form id="plantForm" class="card bg-[#15803D] shadow p-6 space-y-3">
+
+                <!-- Name -->
+                <input type="text" name="name" placeholder="Your Name" class="input input-bordered w-full" required>
+
+                <!-- Email -->
+                <input type="email" name="email" placeholder="Your Email" class="input input-bordered w-full" required>
+
+                <!-- Dropdown for Number of Trees -->
+                <select name="count" class="select select-bordered w-full" required>
+                    <option value="" disabled selected>Select number of trees</option>
+                    <option value="1">1 Tree — $5</option>
+                    <option value="5">5 Trees — $25</option>
+                    <option value="10">10 Trees — $50</option>
+                </select>
+
+                <!-- Donate Button -->
+                <button class="btn btn-warning w-full" type="submit">
+                    <span class="text-green-900">Donate Now</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-4 bg-[#14532D] text-base-content">
+        <aside>
+            <p class="text-white">© Green Earth • Made with ♥ Rafia</p>
+        </aside>
+    </footer>
+
+    <!-- Modal -->
+    <dialog id="plant-modal" class="modal">
+        <form method="dialog" class="modal-box">
+            <h3 id="modal-title" class="font-bold text-lg"></h3>
+            <img id="modal-image" class="w-full h-48 object-cover my-4 rounded" />
+            <p id="modal-description" class="text-gray-600 mb-2"></p>
+            <p class="text-sm text-gray-500">Category: <span id="modal-category"></span></p>
+            <p class="font-bold mt-2">Price: $<span id="modal-price"></span></p>
+            <div class="modal-action">
+                <button class="btn">Close</button>
+            </div>
+        </form>
+    </dialog>
+
+    <!-- Product Detail Modal -->
+    <dialog id="product_modal" class="modal">
+        <form method="dialog" class="modal-box">
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+            <div id="modal-body">
+                <h3 class="font-bold text-lg">Plant Details</h3>
+                <p>Details will load here...</p>
+            </div>
+        </form>
+    </dialog>
+
+    <!-- Cart Modal -->
+    <dialog id="cart_modal" class="modal">
+        <form method="dialog" class="modal-box max-w-lg">
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+            <h3 class="font-bold text-lg mb-4">Your Cart</h3>
+            <div id="cart-list" class="space-y-2"></div>
+            <div class="font-bold mt-4">Total: $<span id="cart-total">0.00</span></div>
+        </form>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
