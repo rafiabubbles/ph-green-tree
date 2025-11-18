@@ -1,6 +1,6 @@
 # 🌳 PH Green Tree
 
-![PH Green Tree Screenshot](./src/assets/web.png)  
+![PH Green Tree Screenshot](./assets/web.png)  
 
 
 ## Overview
